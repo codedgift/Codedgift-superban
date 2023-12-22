@@ -39,7 +39,7 @@ Edit the published `config/superban.php` file as needed.
 Apply the `superban` middleware to routes in your Laravel application to enforce rate limiting and banning:
 
 **For Group Routes:**
-```json
+```php
 Route::middleware(['superban:200,2,1440'])->group(function () {
     Route::get('/thisroute', function () {
         // Route logic here
@@ -51,7 +51,7 @@ Route::middleware(['superban:200,2,1440'])->group(function () {
 });
 ```
 **For Single Routes:**
-```json
+```php
 Route::middleware(['superban:200,2,1440'])->get('/singleroute', function () {
     // Route logic here
 });

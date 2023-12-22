@@ -1,0 +1,35 @@
+{
+    "name": "edenlife/superban",
+    "keywords": ["php","github", "laravel", "superban", "Edenlife"],
+    "description": "Superban, a package that has the ability to ban a client completely for a period of time",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Edenlife\\Superban\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gift Amah",
+            "email": "codedgift@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0 || ^10.0",
+        "guzzlehttp/guzzle": "^7.2",
+        "phpunit/phpunit": "^10.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Edenlife\\Superban\\Providers\\SuperbanServiceProvider"
+            ],
+            "aliases": {
+                "Superban": "Edenlife\\Superban\\Facades\\Superban"
+            }
+        }
+    }
+}
